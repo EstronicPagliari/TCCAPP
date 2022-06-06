@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon name="document-text-outline"></ion-icon> 
+      RECEITA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-button color="primary" expand="full" (click)="criarreceita(rec.id)" >CRIAR RECEITA</ion-button>
+
+
+<ion-item>
+  <h3>Receita Atual</h3>
+</ion-item>
+  
+  <ion-list *ngFor="let recautal of receitaatual | async" >
+     <ion-item>
+      <ion-text color="success"><h4>{{recautal.nomereceita}}</h4> </ion-text>
+      
+      <ion-button slot="end" (click)="abrirreceita(recautal.id)">
+        <ion-icon name="folder-open-outline"></ion-icon>
+      </ion-button>
+     </ion-item> 
+  </ion-list>
+
+
+<ion-item>
+  <h3>Receitas</h3>
+</ion-item>
+
+<ion-list *ngFor="let rec of receita | async">
+  <ion-item>
+    <ion-label>{{rec.nomereceita}}</ion-label>
+    <ion-button (click)="presentAlert(rec.nomereceita, rec.id)">
+      <ion-icon name="checkmark-outline"></ion-icon>
+    </ion-button>
+    <ion-button (click)="abrirreceita(rec.id)">
+      <ion-icon name="folder-open-outline"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon name="pencil-outline" ></ion-icon>
+    </ion-button>
+    <ion-button (click)="deletereceita(rec.id)">
+      <ion-icon name="trash"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-list>
+
+
+<ion-button (click)="presentAlertPrompt()">
+  TESTETSTETE
+</ion-button>
+
+</ion-content>

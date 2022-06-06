@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon name="document-text-outline"></ion-icon> 
+      RECEITA ABERTA
+    </ion-title>
+    <ion-button slot="end" (click)=" trocarpage()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+  
+      <ion-button>
+        Carregar 
+        <ion-icon name="folder-open-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        Alterar 
+        <ion-icon name="pencil-outline" ></ion-icon>
+      </ion-button>
+      <ion-button>
+        Excluir 
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+
+  </ion-list>
+
+
+  <ion-list *ngFor="let rec of receita2 | async">
+    <ion-item>
+      <h3>Nome Receita:{{rec.nomereceita}}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Etapa 1° :</h3>
+      Set tempo 1º : {{rec.settempo1}} minutos <br>
+      Set temperatura 1º : {{rec.settemperatura1}}°C
+    </ion-item>
+    <ion-item>
+      <h3>Etapa 2°</h3>
+      Set tempo 2º : {{rec.settempo2}} minutos<br>
+      Set temperatura 2º : {{rec.settemperatura2}}°C
+    </ion-item>
+    <ion-item>
+      <h3>Etapa 3°</h3>
+      Set tempo 3º : {{rec.settempo3}} minutos<br>
+      Set temperatura 3º : {{rec.settemperatura3}}°C
+    </ion-item>
+    <ion-item>
+      <h3>Etapa 4°</h3>
+      Set tempo 4º : {{rec.settempo4}} minutos<br>
+      Set temperatura 4º : {{rec.settemperatura4}}°C
+    </ion-item>
+    <ion-item>
+      <h3>Etapa 5°</h3>
+      Set tempo 5º : {{rec.settempo5}} minutos<br>
+      Set temperatura 5º : {{rec.settemperatura5}}°C
+    </ion-item>
+    <ion-item>
+      <h3>Etapa 6°</h3>
+      Set tempo 6º : {{rec.settempo6}} minutos<br>
+      Set temperatura 6º : {{rec.settemperatura6}}°C
+    </ion-item>
+    <ion-item>
+      <h3>Etapa 7°</h3>
+      Set tempo 7º : {{rec.settempo7}} minutos<br>
+      Set temperatura 7º : {{rec.settemperatura7}}°C
+    </ion-item>
+    <ion-item>
+      <h3>Etapa 8°</h3>
+      Set tempo 8º : {{rec.settempo8}} minutos<br>
+      Set temperatura 8º : {{rec.settemperatura8}}°C
+    </ion-item>
+  </ion-list>
+
+</ion-content>

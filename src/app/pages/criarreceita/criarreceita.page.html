@@ -1,0 +1,105 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon name="document-text-outline"></ion-icon> 
+      CRIAR RECEITA 
+    </ion-title>
+    <ion-button slot="end" (click)=" trocarpage()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+  
+      <ion-button expand="full" (click)="clickme()">
+        CRIAR RECEITA
+        <ion-icon name="folder-open-outline"></ion-icon>
+      </ion-button>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      Nome Receita: 
+      <ion-input type="text" [(ngModel)]="nomereceita"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h2>Etapa 1º</h2>
+    </ion-item>
+      <ion-item>
+      Set tempo 1º:
+      <ion-input type="text"></ion-input>
+      Set temperatura 1º:
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h2>Etapa 2º</h2>
+    </ion-item>
+    <ion-item>
+      Set tempo 2º:
+      <ion-input type="text"></ion-input>
+      Set temperatura 2º:
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h2>Etapa 3º</h2>
+    </ion-item>
+    <ion-item>
+      Set tempo 3º:
+      <ion-input type="text"></ion-input>
+      Set temperatura 3º:
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h2>Etapa 4º</h2>
+    </ion-item>
+    <ion-item>
+      Set tempo 4º:
+      <ion-input type="text"></ion-input>
+      Set temperatura 4º:
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h2>Etapa 5º</h2>
+    </ion-item>
+    <ion-item>
+      Set tempo 5º:
+      <ion-input type="text"></ion-input>
+      Set temperatura 5º:
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h2>Etapa 6º</h2>
+    </ion-item>
+    <ion-item>
+      Set tempo 6º:
+      <ion-input type="text"></ion-input>
+      Set temperatura 6º:
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h2>Etapa 7º</h2>
+    </ion-item>
+    <ion-item>
+      Set tempo 7º:
+      <ion-input type="text"></ion-input>
+      Set temperatura 7º:
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h2>Etapa 8º</h2>
+    </ion-item>
+    <ion-item>
+      Set tempo 8º:
+      <ion-input type="text"></ion-input>
+      Set temperatura 8º:
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

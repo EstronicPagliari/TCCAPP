@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title>
+    <ion-icon name="cog-outline"></ion-icon>  
+      ACIONAMENTO MOTOR
+    </ion-title>
+    <ion-button slot="end" color="primary" (click)="teste()">refresh</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+            <ion-button color="success" expand="full" (click)="ligarMotor()" >LIGAR</ion-button>
+            <ion-button color="danger" expand="full" (click)="DesligarMotor()">DESLIGAR</ion-button>
+            <ion-button color="warning" expand="full" (click)="btRearme()" >REARME</ion-button>
+      </div>
+      </ion-col>
+      <ion-col>
+        <ion-list style="position: absolute; top: 10%; left: 25%;" *ngFor="let status of motor$ | async">
+            <ion-img *ngIf="status.RetLigado===1" style="width: 100px; height: 100px;" src="/assets/MOTOR_LIGA.png"></ion-img>
+            <ion-img *ngIf="status.RetLigado===0" style="width: 100px; height: 100px;" src="/assets/MOTOR_DESLIGA.png"></ion-img>
+      </ion-list>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-start">
+          <ion-list *ngFor="let falha of motorfalha$ | async">
+            <ion-img *ngIf="falha.Falha===1" style="position: relative;top:12px;left: 20%;width: 100px; height: 100px; " src="/assets/FALHA.png"></ion-img>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+    <ion-list >
+      <h1>Status Atual Motor</h1>
+      <ion-item>
+          Corrente:<ion-label *ngFor="let dados of falha$ | async"> {{dados.Corrente}}<br></ion-label> 
+      </ion-item>
+      <ion-item>
+        Frequencia Saida:<ion-label *ngFor="let dados of falha$ | async">{{dados.FreqSaida}}<br></ion-label> 
+    </ion-item>
+    <ion-item>
+      Frequencia Manual Atual :<ion-label *ngFor="let dados of falha$ | async">{{dados.FreqManual}}<br></ion-label> 
+  </ion-item>
+  </ion-list>
+
+  <ion-list> 
+    <h1>Alteração de Velocidade</h1>
+    <ion-item>
+      <ion-input #box (keyup)="altFrequenciaalt(box.value)" type="numeric" value="">Digitar Frequencia:</ion-input>
+      <ion-button (click)=altFrequencia(box.value)>Velocidade</ion-button>
+    </ion-item>
+  </ion-list>
+    
+     
+      <ion-list *ngFor="let rearme of rearme$ | async">
+      </ion-list>
+
+      <ion-list *ngFor="let freq of freq$ | async">
+      </ion-list>
+
+    
+</ion-content>
+
+

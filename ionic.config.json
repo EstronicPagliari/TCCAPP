@@ -1,0 +1,8 @@
+{
+  "name": "AppClp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

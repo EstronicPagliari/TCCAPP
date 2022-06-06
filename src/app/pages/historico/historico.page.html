@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title>
+    <ion-icon name="reader-outline"></ion-icon>  
+      HISTÓRICO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-align-self-center" size="6">
+        <ion-button  expand="full"  >HISTÓRICO PROCESSO</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button  expand="full" >HISTÓRICO ALARMES</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+  <ion-item>
+    <H2>Histórico de Processo</H2>
+  </ion-item>
+  
+  <ion-list>
+    <ion-item>
+        <h3>ID: 4</h3>
+      <ion-button slot="end" (click)="abrirreceita()"  >ABRIR</ion-button>
+    </ion-item>
+    <ion-item>
+      <h3>ID: 3</h3>
+    <ion-button slot="end"  >ABRIR</ion-button>
+  </ion-item>
+  <ion-item>
+    <h3>ID: 2</h3>
+  <ion-button slot="end"  >ABRIR</ion-button>
+</ion-item>
+<ion-item>
+  <h3>ID: 1</h3>
+<ion-button slot="end"  >ABRIR</ion-button>
+</ion-item>
+  </ion-list>
+</ion-content>
